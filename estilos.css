@@ -1,12 +1,13 @@
 *{
     font-family: 'Source Code Pro', monospace;
     font-size: 17px;
+    color: #fff;
 }
 
 :root {
     --details: #00F3FF  ;
-    --color-main: #096775;
-    --color-aboutme: linear-gradient(#999, #fff);
+    --color-main: #0a132c;
+    --color-aboutme: #fff;
 }
 
 .content{
@@ -24,6 +25,7 @@
     top: 0;
     width: 100%;
     box-shadow: 2px 4px 15px black;
+    z-index: 50;
 }
 
 .content__nav{
@@ -62,7 +64,7 @@
 }
 
 .logo {
-    color: black;
+    color: #fff;
     text-decoration: none;
     font-size: 30px;
     user-select: none;
@@ -72,7 +74,7 @@
 
 
 .logo:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .nav__li::before {
@@ -92,14 +94,11 @@
     height: 5px;
     top: 0;
     position: absolute;
+    border-radius: 4px;
 }
 
 .nav__li a:hover {
     color: #999;
-}
-
-.title {
-    font-size: 50px;
 }
 
 
@@ -117,61 +116,72 @@
     background-color: var(--color-main);
 }
 
+.main__title-container {
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 50px;
+    margin: 0;
+}
+
 .main__img-content {
     padding-right: 10vh;
     background-color: var(--color-main);
 }
 
 .download-cv {
+    font-weight: 600;
     padding: 10px;
     border: none;
     border-radius: 20px;
     margin-top: 10px;
     cursor: pointer;
     transition: background .5s;
+    color: #fff;
+    background-color: #f64f64;
 }
 
 .download-cv:hover {
-    box-shadow: 1px 3px 11px -5px #999;
-    background: var(--details);
+    background-color: #fa95a2;
 }
 
 .main__aboutme {
     grid-column: 1/4;
     background: var(--color-aboutme);
-    display: grid;
-    grid-column: 1/4;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
+    display: flex;
 }
 
-.main__aboutme img {
-    width: 60vh;
+.aboutme__content p {
+    color: var(--color-main);
 }
 
 .aboutme-title {
-    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .aboutme-title h2{
     width: 180px;
     font-size: 40px;
+    color: var(--color-main);
+
+}
+.main__aboutme-info {
+    margin: 30px 200px 30px 200px;
 }
 
 
 .divider {
-    height: 3px;
-    width: 80px;
+    height: 6px;
+    width: 50px;
     background: var(--details);
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    border-radius: 5px;
 }
 
-
-.test button {
-    width: 150px;
-    margin-top: 20px;
-}
 
 .main__skills {
     width: 100%;
@@ -182,16 +192,14 @@
 }
 
 .main__skills-headings {
-    padding: 3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main__skills-headings h2 {
     font-size: 40px;
-}
-
-.main__skills-container h2 {
-    font-size: 20px;
-    text-align: center;
 }
 
 .main__skills-container {
@@ -204,20 +212,26 @@
     gap: 20px;*/
 
     /*FlexBox*/
-
+    margin-bottom: 3em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
+    gap: 40px;
 }
 
 .card {
-    margin: 20px;
     width: 400px;
+    min-height: 450px;
     background: #85929E ;
     border-radius: 20px;
-    box-shadow: 1px 8px 30px #333;
+    transition: .2s;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 20px var(--details);
+    transform: scale(1.05);
+    position: relative;
 }
 
 .card__img {
@@ -231,13 +245,66 @@
 }
 
 .card__title h2 {
+    text-align: center;
     font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.test p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.main__experience {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+}
+
+.main__experience-headings {
+    padding: 1em;
+}
+
+.main__experience-headings h2 {
+    color: var(--color-main);
+    font-size: 40px;
+}
+
+.main__experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__experience-card {
+    margin: 15px;
+    width: 400px;
+    min-height: 450px;
+    text-align: center;
+    backdrop-filter: blur(1rem);
+    border: 2px solid var(--color-main);
+}
+
+.main__experience-card h3 {
+    color: var(--color-main);
+}
+
+.main__experience-card p {
+    color: var(--color-main);
 }
 
 .footer{
     display: flex;
     grid-column: 1/4;
     grid-row: 3/4;
+    background: #151922;
+    height: 150px;
 }
 
 
