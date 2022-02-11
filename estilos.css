@@ -4,6 +4,10 @@
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --details: #00F3FF  ;
     --color-main: #0a132c;
@@ -68,7 +72,6 @@
     color: #fff;
     text-decoration: none;
     font-size: 30px;
-    user-select: none;
     display: flex;
     transition: transform .5s;
 }
