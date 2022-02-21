@@ -25,12 +25,13 @@ html {
 
 .content__header {
     grid-column: 1/4;
+    grid-row: 1/2;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     box-shadow: 2px 4px 15px black;
-    z-index: 50;
+    z-index: 100;
 }
 
 .content__nav{
@@ -39,13 +40,22 @@ html {
     display: flex;
     height: 100%;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .nav__ul{ 
     display: flex;
     width: 50%;
     justify-content: space-around;
+}
+
+.nav__ul-responsive {
+    display: none;
+}
+
+
+.nav__btn {
+    display: none;
 }
 
 .nav__li {
@@ -105,6 +115,91 @@ html {
     color: #999;
 }
 
+ul.show{
+    top: 50px;
+}
+
+ul.less{
+    top: -50px
+}
+
+
+@media screen and (max-width: 952px){
+
+    .content{
+        display: grid;
+        grid-template-rows: 50px 1fr 60px;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .content__header {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: 2px 4px 15px black;
+        height: 50px;
+    }
+
+    .content__nav {
+        height: 50px;
+    }
+
+    .nav__btn {
+        display: inline-flex;
+    }
+
+    .nav__ul {
+        display: none;
+    }
+
+    .nav__ul-responsive {
+        display: inline-flex;
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 50px);
+        background: #f64f64;
+        top: -100vh;
+        text-align: center;
+        transition: all 2s;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 1;
+    }
+
+    .nav__li-responsive {
+        list-style: none;
+    }
+
+    .nav__li-responsive a {
+        text-decoration: none;
+        color: #fff;
+        margin: 8px;
+        transition: color .5s;
+    }
+
+
+    .logo:hover{
+        transform: none;
+    }
+}
+
+
+@media screen and (max-width:900px) and (orientation: landscape){
+    .nav__li {
+        margin: 5px 0 0 0;
+    }
+
+    .nav__ul {
+        overflow: scroll;
+        height: calc(100% - 55px);
+    }
+    
+}
 
 .main {
     grid-row: 2/3;
@@ -121,9 +216,6 @@ html {
     justify-content: space-between;
 }
 
-.main__info-content p{
-
-}
 
 .main__title-container {
     padding: 8vh;
@@ -135,11 +227,24 @@ html {
     margin: 0;
 }
 
-.main__info-content img {
-    
+
+.download-cv {
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background .5s;
+    color: #fff;
+    background-color: #f64f64;
 }
 
-@media screen and (min-width:450px) {
+.download-cv:hover {
+    background-color: #fa95a2;
+}
+
+@media screen and (min-width:1000px) {
     .main__info-content img {
        width: 50%;
     }
@@ -157,22 +262,6 @@ html {
         justify-content: space-between;
     }
 
-}
-
-.download-cv {
-    font-weight: 600;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background .5s;
-    color: #fff;
-    background-color: #f64f64;
-}
-
-.download-cv:hover {
-    background-color: #fa95a2;
 }
 
 .main__aboutme {
@@ -199,16 +288,6 @@ html {
     color: var(--color-main);
 
 }
-.main__aboutme-info {
-    
-}
-
-@media screen and (min-width:450px) {
-    .main__aboutme-info{
-        margin: 30px 200px 30px 200px;
-    }
-}
-
 
 .divider {
     height: 6px;
@@ -219,6 +298,11 @@ html {
     border-radius: 5px;
 }
 
+@media screen and (min-width:1000px) {
+    .main__aboutme-info{
+        margin: 30px 200px 30px 200px;
+    }
+}
 
 .main__skills {
     width: 100%;
@@ -299,6 +383,10 @@ html {
 
 .main__experience-headings {
     padding: var(--padding-sections);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main__experience-headings h2 {
@@ -338,6 +426,13 @@ html {
 .main__experience-card p {
     color: var(--color-main);
 }
+
+@media screen and (max-width:952px){
+    .main__experience-headings{
+        padding: 10px;
+    }
+}
+
 .main__contactme {
     grid-column: 1/4;
     margin: 0 130px;
@@ -361,9 +456,26 @@ html {
 }
 
 .main__contactme-form {
-    max-width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width:952px){
+    .main__contactme{
+        margin: 0;
+    }
+
+    .main__contactme-headings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__contactme-form{
+        width: 100%;
+    }
+    
 }
 
 .form__input {
@@ -393,8 +505,6 @@ html {
     height: 150px;
     align-items: center;
     justify-content: space-around;
-
-
     
 }
 

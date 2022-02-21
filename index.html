@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Sen&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4eeb27fdf8.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
     <title>Currículum</title> 
 </head>
 <body>
@@ -28,9 +29,22 @@
                     <li class="nav__li"><i class="fab fa-black-tie"></i><a href="#experience">Experience</a></li>
                     <li class="nav__li "><i class="fas fa-paper-plane"></i><a href="#contactme">Contact Me</a></li>
                 </ul>
+                <span class="nav__btn">
+                    <i class="fas fa-bars"></i>
+                </span>
             </nav>
-
+            
         </header>
+
+        <!--Tuve que poner el menu responsive por fuera del header porque dentro del mismo no me estan funcionando los z-index o no los estoy pudiendo usar bien-->
+        
+        <ul class="nav__ul-responsive">
+            <li class="nav__li-responsive"><i class="fas fa-home"></i><a href="#">Home</a></li>
+            <li class="nav__li-responsive "><i class="fas fa-id-card-alt"></i><a href="#aboutme">About Me</a></li>
+            <li class="nav__li-responsive"><i class="fas fa-atom"></i><a href="#skills">Skills</a></li>
+            <li class="nav__li-responsive"><i class="fab fa-black-tie"></i><a href="#experience">Experience</a></li>
+            <li class="nav__li-responsive "><i class="fas fa-paper-plane"></i><a href="#contactme">Contact Me</a></li>
+        </ul>
 
         <main class="main">
 
@@ -177,8 +191,11 @@
             <div class="main__experience" id="experience">
 
                 <div class="main__experience-headings">
-                    <h2>My Experience</h2>
-                    <div class="divider"></div>
+                    <div>
+                        <h2>My Experience</h2>
+                        <div class="divider"></div>
+                    </div>
+                    
                 </div>
         
                 <div class="main__experience-container">
