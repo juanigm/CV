@@ -165,7 +165,7 @@ ul.less{
         background: #f64f64;
         top: -100vh;
         text-align: center;
-        transition: all .4s;
+        transition: all 1s;
         flex-direction: column;
         justify-content: space-around;
         z-index: 1;
