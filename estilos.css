@@ -219,22 +219,18 @@ ul.less{
 
 .main__title-container {
     padding: 8vh;
-    
 }
 
 .title {
     font-size: 60px;
-    margin: 0;
 }
-
-
 
 .download-cv {
     font-weight: 600;
     padding: 10px;
     margin-top: 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 20px;    
     cursor: pointer;
     transition: background .5s;
     color: #fff;

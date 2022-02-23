@@ -235,20 +235,23 @@
         
                 <div class="main__contactme-inputs">
                     
-                    <form class="main__contactme-form">
+                    <form class="main__contactme-form" id="form" action="https://formsubmit.co/juanigm99@gmail.com" method="POST" target="_BLANK">
         
                         <div class="form__section">
-                            <input type="text" class="form__input" placeholder="Name">
+                            <input type="text" class="form__input" placeholder="Name" name="name" required="">
                         </div>
         
                         <div class="form__section">
-                            <input type="email" class="form__input" placeholder="E-mail">
+                            <input type="email" class="form__input" placeholder="E-mail" name="email" required="">
                         </div>
         
                         <div class="form__section">
-                            <textarea class="form__input" placeholder="Message"></textarea>
+                            <textarea class="form__input" placeholder="Message" name="msg" required=""></textarea>
                         </div>
-        
+                        
+                        <div class="form__section">
+                            <input class="download-cv" type="submit" name="send">
+                        </div>
                     </form>
                 </div>
                 
