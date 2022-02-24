@@ -119,10 +119,6 @@ ul.show{
     top: 50px;
 }
 
-ul.less{
-    top: -50px
-}
-
 
 @media screen and (max-width: 952px){
 
