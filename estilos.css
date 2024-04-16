@@ -240,7 +240,12 @@ ul.show{
 
 @media screen and (min-width:1000px) {
     .main__info-content img {
-       width: 50%;
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: centrer;
+       background-color: #252d5d;
     }
 
     .main__title-container {
