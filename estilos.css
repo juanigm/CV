@@ -419,6 +419,13 @@ ul.show{
     text-align: center;
 }
 
+.experience-card-title h4 {
+    font-size: 15px;
+    color: var(--color-main);
+    padding: 20px;
+    text-align: center;
+}
+
 .main__experience-card p {
     color: var(--color-main);
 }
